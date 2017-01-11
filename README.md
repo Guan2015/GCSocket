@@ -2,11 +2,9 @@
 ==========
 ##一、socket 通信，本demo使用到Socket C API 与 GCDAsynSocket，其中GCDAsynSocket使用pod管理
 
-`target 'GCSocketDemo' do
-
-pod 'CocoaAsyncSocket', '~> 7.5.1'
-
-end`
+`target 'GCSocketDemo' do`
+`pod 'CocoaAsyncSocket', '~> 7.5.1'`
+`end`
 
 socket C API 在 GCSocket.m 中在接受消息只是使用到NSTimer定时来测试
 
