@@ -10,7 +10,7 @@ socket C API 在 GCSocket.m 中在接受消息只是使用到NSTimer定时来测
 
 ##二、在项目中经常使用到GCDAsynSocket
 测试方法如下：
-*关闭socket c API 使用 GCDAsyncSocket 
+关闭socket c API 使用 GCDAsyncSocket 
  `
    /**
     _socket = [[GCSocket alloc] init];
@@ -23,9 +23,9 @@ socket C API 在 GCSocket.m 中在接受消息只是使用到NSTimer定时来测
     [_asyncSocket connectWithHost:@"127.0.0.1" port:8888];
     [_asyncSocket writeData:[@"hello" dataUsingEncoding:NSUTF8StringEncoding] timeout:1 tag:1]; `
     
-*在mac下使用Terminal键入`nc -lk 8888`模拟socket服务端
+在mac下使用Terminal键入`nc -lk 8888`模拟socket服务端
 
-*如果想监测网络可以使用`sudo tcpdump -i any -n -X port 8888`
+如果想监测网络可以使用`sudo tcpdump -i any -n -X port 8888`
 
 ##三、关于Socket消息粘包
    （资料来着网络整理）
