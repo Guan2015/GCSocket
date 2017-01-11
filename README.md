@@ -6,7 +6,9 @@ target 'GCSocketDemo' do
 pod 'CocoaAsyncSocket', '~> 7.5.1'
 
 end
+
 socket C API 在 GCSocket.m 中在接受消息只是使用到NSTimer定时来测试
+
 二、关于Socket消息粘包
 （资料来着网络整理）
 TCP粘包是指发送方发送的若干包数据到接收方接收时粘成一包，从接收缓冲区看，后一包数据的头紧接着前一包数据的尾。
