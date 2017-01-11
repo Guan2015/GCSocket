@@ -2,24 +2,23 @@
 ==========
 ##一、socket 通信，本demo使用到Socket C API 与 GCDAsynSocket，其中GCDAsynSocket使用pod管理
 
-target 'GCSocketDemo' do
+`target 'GCSocketDemo' do
 
 pod 'CocoaAsyncSocket', '~> 7.5.1'
 
-end
+end`
 
 socket C API 在 GCSocket.m 中在接受消息只是使用到NSTimer定时来测试
 
 ##二、在项目中经常使用到GCDAsynSocket
 测试方法如下：
- *关闭socket c API 使用 GCDAsyncSocket 
- `/**
+*关闭socket c API 使用 GCDAsyncSocket 
+ `
+   /**
     _socket = [[GCSocket alloc] init];
     [_socket connectionToHost:@"127.0.0.1" onPort:8888];
     [_socket sendMessage:@"hello"];
-     
-     */
-    
+   */
     // use GCDAsyncSocket API 
     _asyncSocket = [[GCAsyncSocket alloc] init];
     _asyncSocket.delegate = self;
