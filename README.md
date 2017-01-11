@@ -24,6 +24,7 @@ socket C API 在 GCSocket.m 中在接受消息只是使用到NSTimer定时来测
     _asyncSocket.delegate = self;
     [_asyncSocket connectWithHost:@"127.0.0.1" port:8888];
     [_asyncSocket writeData:[@"hello" dataUsingEncoding:NSUTF8StringEncoding] timeout:1 tag:1]; `
+    
 *在mac下使用Terminal键入`nc -lk 8888`模拟socket服务端
 
 *如果想监测网络可以使用`sudo tcpdump -i any -n -X port 8888`
