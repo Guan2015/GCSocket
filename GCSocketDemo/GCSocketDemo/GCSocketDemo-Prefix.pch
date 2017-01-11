@@ -1,0 +1,23 @@
+//
+//  GCSocketDemo-Prefix.pch
+//  GCSocketDemo
+//
+//  Created by 哈帝 on 16/12/12.
+//  Copyright © 2016年 guan. All rights reserved.
+//
+
+#ifndef GCSocketDemo_Prefix_pch
+#define GCSocketDemo_Prefix_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#ifdef DEBUG
+#define GCSocketLog(format, ...) NSLog(format, ## __VA_ARGS__)
+#else
+#define RHSocketLog(format, ...)
+#endif
+
+
+
+#endif /* GCSocketDemo_Prefix_pch */

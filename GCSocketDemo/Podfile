@@ -1,0 +1,5 @@
+target 'GCSocketDemo' do
+
+pod 'CocoaAsyncSocket', '~> 7.5.1'
+
+end
