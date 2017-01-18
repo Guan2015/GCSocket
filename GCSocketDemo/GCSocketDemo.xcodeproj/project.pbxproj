@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F781EBB1E2F3F9900640F35 /* socket.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F781EBA1E2F3F9900640F35 /* socket.png */; };
+		0F781EBE1E2F4B0F00640F35 /* log.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F781EBC1E2F4B0F00640F35 /* log.png */; };
+		0F781EBF1E2F4B0F00640F35 /* terminal.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F781EBD1E2F4B0F00640F35 /* terminal.png */; };
+		0F781EC11E2F4B8B00640F35 /* check.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F781EC01E2F4B8B00640F35 /* check.png */; };
 		0F9EE8C51DFE9785002D3BDE /* GCAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F9EE8C41DFE9785002D3BDE /* GCAsyncSocket.m */; };
 		0FFF80691DFA89390021B0DE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FFF80681DFA89390021B0DE /* main.m */; };
 		0FFF806C1DFA89390021B0DE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FFF806B1DFA89390021B0DE /* AppDelegate.m */; };
@@ -38,6 +42,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0F781EBA1E2F3F9900640F35 /* socket.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = socket.png; sourceTree = "<group>"; };
+		0F781EBC1E2F4B0F00640F35 /* log.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = log.png; sourceTree = "<group>"; };
+		0F781EBD1E2F4B0F00640F35 /* terminal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = terminal.png; sourceTree = "<group>"; };
+		0F781EC01E2F4B8B00640F35 /* check.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = check.png; sourceTree = "<group>"; };
 		0F9EE8C31DFE9785002D3BDE /* GCAsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCAsyncSocket.h; path = ../GCAsyncSocket.h; sourceTree = "<group>"; };
 		0F9EE8C41DFE9785002D3BDE /* GCAsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCAsyncSocket.m; path = ../GCAsyncSocket.m; sourceTree = "<group>"; };
 		0F9EE8C71DFE9ABA002D3BDE /* GCSocketDemo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GCSocketDemo-Prefix.pch"; sourceTree = "<group>"; };
@@ -143,6 +151,10 @@
 		0FFF80671DFA89390021B0DE /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				0F781EC01E2F4B8B00640F35 /* check.png */,
+				0F781EBA1E2F3F9900640F35 /* socket.png */,
+				0F781EBC1E2F4B0F00640F35 /* log.png */,
+				0F781EBD1E2F4B0F00640F35 /* terminal.png */,
 				0FFF80681DFA89390021B0DE /* main.m */,
 				0F9EE8C71DFE9ABA002D3BDE /* GCSocketDemo-Prefix.pch */,
 			);
@@ -294,8 +306,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				0FFF80771DFA89390021B0DE /* LaunchScreen.storyboard in Resources */,
+				0F781EBF1E2F4B0F00640F35 /* terminal.png in Resources */,
+				0F781EC11E2F4B8B00640F35 /* check.png in Resources */,
 				0FFF80741DFA89390021B0DE /* Assets.xcassets in Resources */,
+				0F781EBB1E2F3F9900640F35 /* socket.png in Resources */,
 				0FFF80721DFA89390021B0DE /* Main.storyboard in Resources */,
+				0F781EBE1E2F4B0F00640F35 /* log.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

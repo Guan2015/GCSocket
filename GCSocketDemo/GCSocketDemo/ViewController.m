@@ -30,22 +30,24 @@
     // 'sudo tcpdump -i any -n -X port 8888' to test
     
     // use Socket C API
-    /**
+    /** */
      
     _socket = [[GCSocket alloc] init];
     [_socket connectionToHost:@"127.0.0.1" onPort:8888];
     [_socket sendMessage:@"hello"];
+    [_socket readMessage];
      
-     */
     
     // use GCDAsyncSocket API
     
-    /** */
+    /**
     
     _asyncSocket = [[GCAsyncSocket alloc] init];
     _asyncSocket.delegate = self;
     [_asyncSocket connectWithHost:@"127.0.0.1" port:8888];
     [_asyncSocket writeData:[@"hello" dataUsingEncoding:NSUTF8StringEncoding] timeout:1 tag:1];
+     
+     */
     
 }
 

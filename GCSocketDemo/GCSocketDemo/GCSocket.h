@@ -25,8 +25,12 @@
 
 - (void)sendMessage:(NSString *)message;
 
-- (void)recvMessage;
+- (void)readMessage;
+
+/* - (void)recvMessage; */
 
 - (id)init;
+
++ (instancetype)shareInstance;
 
 @end
