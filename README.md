@@ -34,8 +34,9 @@
 关闭socket c API 使用 GCDAsyncSocket 
 
 #### 在mac下使用Terminal键入`nc -lk 8888`模拟socket服务端
-![](https://github.com/Guan2015/GCSocket/blob/master/GCSocketDemo/GCSocketDemo/terminal.png)
+![](https://github.com/Guan2015/GCSocket/blob/master/GCSocketDemo/GCSocketDemo/terminal.png) <br>
 如果想监测网络可以使用`sudo tcpdump -i any -n -X port 8888`
+![](https://github.com/Guan2015/GCSocket/blob/master/GCSocketDemo/GCSocketDemo/check.png)
 
 ## 三、关于Socket消息粘包
       资料来着网络整理
