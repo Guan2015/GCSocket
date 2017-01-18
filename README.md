@@ -35,6 +35,7 @@
 
 #### 在mac下使用Terminal键入`nc -lk 8888`模拟socket服务端
 ![] (https://github.com/Guan2015/GCSocket/tree/master/GCSocketDemo/GCSocketDemo/terminal.png)
+![baidu](http://www.baidu.com/img/bdlogo.gif)
 如果想监测网络可以使用`sudo tcpdump -i any -n -X port 8888`
 
 ## 三、关于Socket消息粘包
