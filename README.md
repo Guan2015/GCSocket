@@ -6,11 +6,30 @@
 `pod 'CocoaAsyncSocket', '~> 7.5.1'`
 `end`
 
-socket C API 在 GCSocket.m 中在接受消息只是使用到NSTimer定时来测试
-      socket 创建并初始化 socket，返回该 socket 的文件描述符，如果描述符为 -1 表示创建失败。
+### socket C API 在 GCSocket.m 中在接受消息只是使用到NSTimer定时来测试
+      //socket 创建并初始化 socket，返回该 socket 的文件描述符，如果描述符为 -1 表示创建失败。
+      int socket(int addressFamily, int type,int protocol)
+      //关闭socket连接
+      int close(int socketFileDescriptor)
+      //将 socket 与特定主机地址与端口号绑定，成功绑定返回0，失败返回 -1。
+      int bind(int socketFileDescriptor,sockaddr *addressToBind,int addressStructLength)
+      //接受客户端连接请求并将客户端的网络地址信息保存到 clientAddress 中。
+      int accept(int socketFileDescriptor,sockaddr *clientAddress, int clientAddressStructLength)
+      //客户端向特定网络地址的服务器发送连接请求，连接成功返回0，失败返回 -1。
+      int connect(int socketFileDescriptor,sockaddr *serverAddress, int serverAddressLength)
+      //使用 DNS 查找特定主机名字对应的 IP 地址。如果找不到对应的 IP 地址则返回 NULL。
+      hostent* gethostbyname(char *hostname)
+      //通过 socket 发送数据，发送成功返回成功发送的字节数，否则返回 -1。
+      int send(int socketFileDescriptor, char *buffer, int bufferLength, int flags)
+      //从 socket 中读取数据，读取成功返回成功读取的字节数，否则返回 -1。
+      int receive(int socketFileDescriptor,char *buffer, int bufferLength, int flags)
+      //通过UDP socket 发送数据到特定的网络地址，发送成功返回成功发送的字节数，否则返回 -1。
+      int sendto(int socketFileDescriptor,char *buffer, int bufferLength, int flags, sockaddr *destinationAddress, int destinationAddressLength)
+      //从UDP socket 中读取数据，并保存发送者的网络地址信息，读取成功返回成功读取的字节数，否则返回 -1 。
+      int recvfrom(int socketFileDescriptor,char *buffer, int bufferLength, int flags, sockaddr *fromAddress, int *fromAddressLength)
             
 
-##二、在项目中经常使用到GCDAsynSocket
+## 二、在项目中经常使用到GCDAsynSocket
 测试方法如下：
 关闭socket c API 使用 GCDAsyncSocket 
 
@@ -18,7 +37,7 @@ socket C API 在 GCSocket.m 中在接受消息只是使用到NSTimer定时来测
 
 如果想监测网络可以使用`sudo tcpdump -i any -n -X port 8888`
 
-##三、关于Socket消息粘包
+## 三、关于Socket消息粘包
       资料来着网络整理
       TCP粘包是指发送方发送的若干包数据到接收方接收时粘成一包，从接收缓冲区看，后一包数据的头紧接着前一包数据的尾。
       出现粘包现象的原因是多方面的，它既可能由发送方造成，也可能由接收方造成。发送方引起的粘包是由TCP协议本身造成的，TCP为提高传输效率，发送方往往要收集到足够多的数据后才发送一包数据。若连续几次发送的数据都很少，通常TCP会根据优化算法把这些数据合成一包后一次发送出去，这样接收方就收到了粘包数据。接收方引起的粘包是由于接收方用户进程不及时接收数据，从而导致粘包现象。这是因为接收方先把收到的数据放在系统接收缓冲区，用户进程从该缓冲区取数据，若下一包数据到达时前一包数据尚未被用户进程取走，则下一包数据放到系统接收缓冲区时就接到前一包数据之后，而用户进程根据预先设定的缓冲区大小从系统接收缓冲区取数据，这样就一次取到了多包数据。
