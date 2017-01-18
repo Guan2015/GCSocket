@@ -38,6 +38,10 @@
 如果想监测网络可以使用`sudo tcpdump -i any -n -X port 8888`
 ![](https://github.com/Guan2015/GCSocket/blob/master/GCSocketDemo/GCSocketDemo/check.png)
 
+## 二、关于socket
+方便理解这里放在示意图（拿别人的^_^)
+![](https://github.com/Guan2015/GCSocket/blob/master/GCSocketDemo/GCSocketDemo/socket.png)
+
 ## 三、关于Socket消息粘包
       资料来着网络整理
       TCP粘包是指发送方发送的若干包数据到接收方接收时粘成一包，从接收缓冲区看，后一包数据的头紧接着前一包数据的尾。
