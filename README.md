@@ -6,7 +6,7 @@
 `pod 'CocoaAsyncSocket', '~> 7.5.1'`
 `end`
 
-### socket C API 在 GCSocket.m 中在接受消息只是使用到NSTimer定时来测试
+### socket C API (OS底层-基于C的BSD Socket)
       //socket 创建并初始化 socket，返回该 socket 的文件描述符，如果描述符为 -1 表示创建失败。
       int socket(int addressFamily, int type,int protocol)
       //关闭socket连接
@@ -29,7 +29,7 @@
       int recvfrom(int socketFileDescriptor,char *buffer, int bufferLength, int flags, sockaddr *fromAddress, int *fromAddressLength)
             
 
-## 二、在项目中经常使用到GCDAsynSocket
+### GCDAsynSocket
 测试方法如下：
 关闭socket c API 使用 GCDAsyncSocket 
 
