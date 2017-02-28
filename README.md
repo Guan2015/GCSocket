@@ -1,3 +1,5 @@
+## 2017/02/28 更新 使用node构建简单版本socket
+`node SocketServer.js`
 # GCSocket
 ==========
 ##一、socket 通信，本demo使用到Socket C API 与 GCDAsynSocket，其中GCDAsynSocket使用pod管理
